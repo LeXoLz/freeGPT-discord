@@ -41,7 +41,7 @@ async def on_ready():
             status=Status.online,
             activity=Activity(
                 type=ActivityType.watching,
-                name=f"{len(bot.guilds)} servers | /help",
+                name=f"{len(bot.guilds)} servers",
             ),
         )
         await sleep(300)
@@ -82,7 +82,7 @@ async def on_app_command_error(interaction, error):
         view.add_item(
             Button(
                 label="Report this error",
-                url="https://discord.com/invite/UxJZMUqbsb",
+                url="discord.gg/hHBeUyjN",
             )
         )
         await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
@@ -109,20 +109,14 @@ async def help(interaction):
     view = View()
     view.add_item(
         Button(
-            label="Invite Me",
-            url="https://dsc.gg/freeGPT-discord",
+            label="Add LeXoL",
+            url="discord.gg/hHBeUyjN",
         )
     )
     view.add_item(
         Button(
-            label="Support Server",
-            url="https://discord.com/invite/UxJZMUqbsb",
-        )
-    )
-    view.add_item(
-        Button(
-            label="Source",
-            url="https://github.com/Ruu3f/freeGPT-discord",
+            label="Lexol",
+            url="discord.gg/hHBeUyjN",
         )
     )
     await interaction.response.send_message(embed=embed, view=view)
